@@ -1,8 +1,10 @@
-# Showerthoughts
-Pwnagotchi plugin - Display random shower thoughts rss headlines when waiting.
+# ShowerThoughts Plugin
 
-Save showerthoughts.py to your plugins directory
+This plugin displays random shower thoughts headlines on your pwnagotchi when the device is waiting.
 
-copy the contents of config from this repo to your config.toml file
+## Installation
 
-this code is untested but I wanted it to get out there to see if the community could find and fix and issues
+1. Clone or download this repository to your pwnagotchi device.
+2. Copy the `Showerthoughts.py` file to the `plugins` directory.
+3. Edit the `config.toml` file and add the lines in 
+
