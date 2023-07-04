@@ -1,3 +1,6 @@
+If you are reading this this code is untested im a total newb and it's probably broken somewhere or could be written more elegantly im sure but im just a monkey with a keyboard, and an AI copilot.
+
+
 # ShowerThoughts Plugin
 
 This plugin displays random shower thoughts headlines on your pwnagotchi when the device is waiting.
