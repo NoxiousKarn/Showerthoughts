@@ -6,7 +6,7 @@ import pwnagotchi.plugins as plugins
 
 
 class ShowerThoughtsPlugin(plugins.Plugin):
-    __author__ = 'Noxiouskarn & GPT3'
+    __author__ = 'Noxiouskarn'
     __version__ = '1.0.0'
     __license__ = 'GPL3'
     __description__ = 'Display random shower thoughts rss headlines when waiting. '
