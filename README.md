@@ -24,10 +24,10 @@ You can edit the RSS you pull remember to also update the save location in `save
 ## Troubleshooting
 If you are having problems with the plugin, please check the following:
 
-Make sure that the plugin is installed correctly.
-Make sure that the RSS feed URL is correct.
-Make sure that the saved_rss file exists and is writable.
-Make sure that the max_title_length value is not too low.
+1. Make sure that the plugin is installed correctly.
+2. Make sure that the RSS feed URL is correct.
+3. Make sure that the saved_rss file exists and is writable.
+4. Make sure that the max_title_length value is not too low.
 
 ## Contributing
 If you would like to contribute to the plugin, please fork the repository and submit a pull request.
