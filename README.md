@@ -13,8 +13,11 @@ This plugin displays random shower thoughts headlines on your pwnagotchi when th
 The following options can be configured in the config.toml file:
 
 `enable`: Whether or not the plugin is enabled. (default: true)
+
 `rss_url`: The URL of the RSS feed that the plugin should download.
+
 `saved_rss`: The file where the plugin should save the downloaded RSS feed.
+
 `max_title_length`: The maximum length of a headline that the plugin will display. (default: 68)
 
 ## Usage
