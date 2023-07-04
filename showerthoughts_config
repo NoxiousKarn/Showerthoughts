@@ -1,0 +1,4 @@
+main.plugins.showerthoughts.enable = true
+main.plugins.showerthoughts.rss_url = "https://www.reddit.com/r/showerthoughts.rss"
+main.plugins.showerthoughts.saved_rss = "/root/showerthoughts.rss"
+main.plugins.showerthoughts.max_title_length = 68
