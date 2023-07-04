@@ -14,9 +14,10 @@ The following options can be configured in the config.toml file:
 
 `enable`: Whether or not the plugin is enabled. (default: true)
 
-`rss_url`: The URL of the RSS feed that the plugin should download.
+`rss_url`: The URL of the RSS feed that the plugin should download. (default:"https://www.reddit.com/r/showerthoughts.rss")
 
-`saved_rss`: The file where the plugin should save the downloaded RSS feed.
+
+`saved_rss`: The file where the plugin should save the downloaded RSS feed. (default:"/root/showerthoughts.rss)
 
 `max_title_length`: The maximum length of a headline that the plugin will display. (default: 68)
 
