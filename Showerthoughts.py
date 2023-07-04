@@ -15,16 +15,22 @@ class ShowerThoughtsPlugin(plugins.Plugin):
         self.rss_url = self.options['rss_url']
         self.saved_rss = self.options['saved_rss']
         self.max_title_length = self.options['max_title_length']
+        self.make_file_writeable = self.options['make_file_writeable']
         self.download_rss_feed()
 
     def on_wait(self, agent, seconds):
         headline = self.get_random_headline()
-        agent.display.write(headline)  # Update the Pwnagotchi display with the headline
-
+        agent.display.write(headline)
+    
     def download_rss_feed(self):
         command = "curl --silent {} --user-agent 'Mozilla' --output {}".format(self.rss_url, self.saved_rss)
         subprocess.run(command, shell=True)
-
+        
+        if self.make_file_writeable:
+            # Make the saved RSS file writeable
+            saved_rss_path = self.options['saved_rss']
+            make_file_writeable(saved_rss_path)
+            
     def remove_long_titles(self):
         with open(self.saved_rss, 'r') as f:
             data = f.read()
