@@ -15,7 +15,7 @@ class ShowerThoughtsPlugin(plugins.Plugin):
         self.rss_url = self.options['rss_url']
         self.saved_rss = self.options['saved_rss']
         self.max_title_length = self.options['max_title_length']
-        self.make_file_writeable = self.options['make_file_writeable']
+        self.make_file_writeable = true
         self.download_rss_feed()
 
     def on_wait(self, agent, seconds):
