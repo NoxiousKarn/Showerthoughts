@@ -31,7 +31,7 @@ The plugin will automatically start displaying random shower thoughts headlines 
 You can edit the RSS you pull remember to also update the save location in `saved_rss` field
 
 ## Troubleshooting
-If you are having problems with the plugin, please check the following:
+If you are having problems with the plugin, stop trying to use it it doesn't work, but if you modified the code and corrected my mistakes and still can't get it to work, please check the following:
 
 1. Make sure that the plugin is installed correctly.
 2. Make sure that the RSS feed URL is correct.
