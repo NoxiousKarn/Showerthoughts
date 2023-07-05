@@ -11,6 +11,12 @@ class ShowerThoughtsPlugin(plugins.Plugin):
     __license__ = 'GPL3'
     __description__ = 'Display random shower thoughts rss headlines when waiting. '
 
+    options = {
+        'rss_url': 'https://www.reddit.com/r/showerthoughts.rss',
+        'saved_rss': '/root/showerthoughts.rss',
+        'max_title_length': 68,
+    }
+
     def __init__(self):
         self.rss_url = self.options['rss_url']
         self.saved_rss = self.options['saved_rss']
