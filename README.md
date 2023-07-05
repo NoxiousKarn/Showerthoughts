@@ -1,4 +1,7 @@
-If you are reading this this code is untested im a total newb and it's probably broken somewhere or could be written more elegantly im sure but im just a monkey with a keyboard, and an AI copilot.
+If you are reading this this code is tested and doesn't work currently. im a total newb and it's broken somewhere or could be written more elegantly im sure but im just a monkey with a keyboard, and an AI copilot. I'm leaving this up and will modify this section when it infact works!
+
+
+DO NOT USE! DOES NOT WORK!
 
 
 # ShowerThoughts Pwnagotchi Plugin
