@@ -1,14 +1,11 @@
 # ShowerThoughts Pwnagotchi Modification
 
 This modification displays random shower thoughts headlines on your pwnagotchi when the device is waiting. 
-This is accomplished through a few steps and replacing voice.py with a version that calls up headlines from a downloaded copy of r/showerthoughts RSS feed
-During the voice.py on_waiting callback, headlines less than 68 characters in length display, instead of "waiting for(x)sec"
-We will download the Showerthoughts RSS feed to /root/showerthoughts.rss, then change the write permissions for it and set automation to download it every 4 hours. 
-We will also use a custom Python script to check the file we created for headlines that are longer than 68 characters and remove them.
-Then we will replace voice.py with our modified version and reboot once in auto/AI mode we should start to see headlines occasionally.
 
+You will need internet to the Pwnagotchi for these steps to work. 
+So first get a shared internet connection via BT or through your host machine. 
+If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
 
-You will need internet to the Pwnagotchi for these steps to work. So first get a shared internet connection via BT or through your host machine. If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
 Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from clipboard)
 
 ## Configuration
@@ -34,6 +31,7 @@ Copy the commands here and paste them in order in a terminal window. (just right
 ## Usage
 It's just gonna run by itself. every 4 hours it will DL the RSS and then remove the long headlines by itself, if you don't have internet after the 4-hour mark it will wait for the internet and download the feed then. 
 (this can cause an error where the RSS displays headlines longer than 68 characters because the cronjob that runs remove_long_titles.py may have already run and has an out-of-sync timer. a simple reboot can correct this problem.
+it is recommended to use this modification with Default memtemp and gps plugins turned off. We need their screen real estate. 
 
 ## Uninstalling
 If you want to undo what we did SSH in.
