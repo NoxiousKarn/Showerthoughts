@@ -2,8 +2,10 @@
 
 This modification displays random shower thoughts headlines on your pwnagotchi when the device is waiting. 
 
-You will need internet to the Pwnagotchi for these steps to work. 
+You will need internet to the Pwnagotchi for these steps to work. And each time it needs to DL the RSS feed.
+
 So first get a shared internet connection via BT or through your host machine. 
+
 If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
 
 Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from clipboard)
@@ -25,7 +27,7 @@ Copy the commands here and paste them in order in a terminal window. (just right
 11. paste the following there: 0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss <~~DL RSS every 4 hours
 12. press enter and paste: 0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1 <~~~Run remove_long_lines.py to toss long Headlins in the feed every 4 hours.
 13. Save CTRL+O, [Enter] to keep the filename the same, Exit CTRL+X
-14. reboot <~~~this will reboot your Pi0 and the pwnagotchi service.
+14. reboot <~~~this will reboot your Pi hardware and the pwnagotchi service.
 15. If you leave the data cord connected it will boot to Manu mode we need auto, once in auto mode you should see new phrases appear occasionally.
 
 ## Usage
