@@ -1,10 +1,14 @@
 # Showerthoughts Pwnagotchi Modification
 
-This modification displays random shower thoughts headlines on your pwnagotchi when the device is waiting. 
+## Introduction
 
-You will need internet to the Pwnagotchi for these steps to work. And each time it needs to DL the RSS feed.
+This modification displays random r/showerthoughts headlines on your pwnagotchi when the device is waiting. It is a fun way to add some personality to your pwnagotchi and keep you entertained.
 
-So first get a shared internet connection via BT or through your host machine. 
+To do the modification, follow the instructions in the configuration section. 
+
+You will need internet to the Pwnagotchi for these steps to work. And every time it needs to download the RSS feed. (It will wait until the internet is restored to perform the download.)
+
+First, get a shared internet connection via BT or through your host machine. 
 
 If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
 
@@ -14,7 +18,7 @@ Copy the commands here and paste them in order in a terminal window. (just right
 
 [command] <~~~ [explanation]
 
-1. First SSH to your Pwnagotchi. <~~~Self explanatory. if you need help with this do not proceed further this modification might not be for you.
+1. SSH to your Pwnagotchi. <~~~Self explanatory. if you need help with this do not proceed further this modification might not be for you.
 2. Sudo su <~~~ go superuser
 3. curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss <~~~Download Showerthoughts RSS feed to root.
 4. chmod 666 /root/showerthoughts.rss <~~~Gives system-wide read-write permissions on the file. Needed to remove long headlines.
