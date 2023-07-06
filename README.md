@@ -32,15 +32,17 @@ You will need internet to the Pwnagotchi for these steps to work. So first get a
 15. If you leave the data cord connected it will boot to Manu mode we need auto, once in auto mode you should see new phrases appear occasionally.
 
 ## Usage
-It's just gonna run by itself. every 4 hours it will DL the RSS and then remove the long headlines by itself, if you don't have internet after the 4-hour mark it will wait for the internet and download the feed then. (this can cause an error where the RSS displays headlines longer than 68 characters because the cronjob that runs remove_long_titles.py may have already run and has an out-of-sync timer. a simple reboot can correct this problem.
+It's just gonna run by itself. every 4 hours it will DL the RSS and then remove the long headlines by itself, if you don't have internet after the 4-hour mark it will wait for the internet and download the feed then. 
+(this can cause an error where the RSS displays headlines longer than 68 characters because the cronjob that runs remove_long_titles.py may have already run and has an out-of-sync timer. a simple reboot can correct this problem.
 
 ## Uninstalling
 If you want to undo what we did SSH in.
 Then we will type a command to remove voice.py and then rename voice.py.old to voice.py effectively undoing our modification. Delete the script and delete the RSS file
 1. sudo su <~~~ Superuser
-2.  rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py
-3. rm /urs/local/bin/remove_long_titles.py
-4. rm /root/showerthoughts.rss
+2.  rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~ removes voice.py then renames voice.py.old to voice.py
+3. rm /urs/local/bin/remove_long_titles.py <~~~ Removes our custom python code that removes long headlines
+4. rm /root/showerthoughts.rss <~~~ Removes showerthoughts.rss file from our root folder
+5. Reboot
 
    There all gone and back to normal!
 
