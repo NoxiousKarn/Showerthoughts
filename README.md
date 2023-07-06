@@ -41,8 +41,9 @@ Then we will type a command to remove voice.py and then rename voice.py.old to v
 3. rm /urs/local/bin/remove_long_titles.py <~~~ Removes our custom python code that removes long headlines
 4. rm /root/showerthoughts.rss <~~~ Removes showerthoughts.rss file from our root folder
 5. crontab -e
-6. Delete the line we added Saveand exit CTRL+O, [ENTER], CTRL+X 
-7. Reboot
+6. Delete the lines we added
+7. Save and exit Hit: CTRL+O, [ENTER], CTRL+X 
+8. Reboot
 
    There all gone and back to normal!
 
