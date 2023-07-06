@@ -9,7 +9,7 @@ Then we will replace voice.py with our modified version and reboot once in auto/
 
 
 You will need internet to the Pwnagotchi for these steps to work. So first get a shared internet connection via BT or through your host machine. If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
-
+Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from clipboard)
 
 ## Configuration
 
