@@ -43,7 +43,7 @@ If you want to undo what we did SSH in.
 Then we will type a command to remove voice.py and then rename voice.py.old to voice.py effectively undoing our modification. Delete the script and delete the RSS file remove the cronjobs and reboot.
 1. sudo su <~~~ Superuser
 2.  rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~ removes voice.py then renames voice.py.old to voice.py
-3. rm /urs/local/bin/remove_long_titles.py <~~~ Removes our custom python code that removes long headlines
+3. rm /usr/local/bin/remove_long_titles.py <~~~ Removes our custom python code that removes long headlines
 4. rm /root/showerthoughts.rss <~~~ Removes showerthoughts.rss file from our root folder
 5. crontab -e
 6. Delete the lines we added
