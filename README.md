@@ -1,4 +1,4 @@
-# ShowerThoughts Pwnagotchi Modification
+# Showerthoughts Pwnagotchi Modification
 
 This modification displays random shower thoughts headlines on your pwnagotchi when the device is waiting. 
 
