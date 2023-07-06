@@ -54,3 +54,14 @@ Then we will type a command to remove voice.py and then rename voice.py.old to v
 
 ## License
 The plugin is licensed under the GPLv3 license.
+
+## Express Install
+
+SSH in to pwnagotchi
+paste the following command into the terminal it contains all of the above commands in one single command, install the new crontab and save it, reboot.
+
+1. sudo su -c "curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss && chmod 666 /root/showerthoughts.rss && wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py && python /usr/local/bin/remove_long_titles.py && wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py && mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old && mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py && (crontab -l ; echo \"0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss\" ; echo \"0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1\") | crontab -"
+
+2. type crontab -e and press enter, CTRL+O, [ENTER], CTRL+X
+
+3. Reboot
