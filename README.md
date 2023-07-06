@@ -21,7 +21,7 @@ You will need internet to the Pwnagotchi for these steps to work. So first get a
 4. chmod 666 /root/showerthoughts.rss <~~~Gives system-wide read-write permissions on the file. Needed to remove long headlines.
 5. wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py <~~~Downloads remove_long_titles.py to the right spot
 6. python /usr/local/bin/remove_long_titles.py <~~~run the script we just saved to remove long headlines right away.
-7. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://github.com/NoxiousKarn/Showerthoughts/blob/main/voice.py <~~~ Saves modified voice.py as voice.py.1
+7. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
 8. mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~This command will first rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
 9. crontab -e <~~~Takes us to CronJobs in the nano text editor.
 10. press the down arrow until your cursor is under: # m h  dom mon dow   command
