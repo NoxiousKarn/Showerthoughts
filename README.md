@@ -26,13 +26,10 @@ Copy the commands here and paste them in order in a terminal window. (just right
 6. python /usr/local/bin/remove_long_titles.py <~~~run the script we just saved to remove long headlines right away.
 7. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
 8. mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~This command will first rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
-9. crontab -e <~~~Takes us to CronJobs in the nano text editor.
-10. press the down arrow until your cursor is under: # m h  dom mon dow   command
-11. paste the following there: 0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss <~~DL RSS every 4 hours
-12. press enter and paste: 0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1 <~~~Run remove_long_lines.py to toss long Headlins in the feed every 4 hours.
-13. Save CTRL+O, [Enter] to keep the filename the same, Exit CTRL+X
-14. reboot <~~~this will reboot your Pi hardware and the pwnagotchi service.
-15. If you leave the data cord connected it will boot to Manu mode we need auto, once in auto mode you should see new phrases appear occasionally.
+9. (echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
+ <~~~ Sets cronjobs to download the RSS every 4 hours, then run remove_long_lines.py to remove long Headlines in the feed file every 4 hours.
+10. reboot <~~~this will reboot your Pi hardware and the pwnagotchi service.
+11. If you leave the data cord connected it will boot to Manu mode we need auto, once in auto mode you should see new phrases appear occasionally.
 
 ## Usage
 It's just gonna run by itself. every 4 hours it will DL the RSS and then remove the long headlines by itself, if you don't have internet after the 4-hour mark it will wait for the internet and download the feed then. 
