@@ -1,9 +1,9 @@
 # ShowerThoughts Pwnagotchi Modification
 
 This modification displays random shower thoughts headlines on your pwnagotchi when the device is waiting. 
-This is accomplished through a few steps and replacing voice.py with a version that calls up headlines from a downloaded copy of showerthoughts RSS 
-During the voice.py on_waiting callback headlines less than 68 characters in length display instead of "waiting for(x)sec"
-We will download the Showerthoughts RSS feed to /root/showerthoughts.rss, then change the write permissions for it, and set automation to download it every 4 hours. 
+This is accomplished through a few steps and replacing voice.py with a version that calls up headlines from a downloaded copy of r/showerthoughts RSS feed
+During the voice.py on_waiting callback, headlines less than 68 characters in length display, instead of "waiting for(x)sec"
+We will download the Showerthoughts RSS feed to /root/showerthoughts.rss, then change the write permissions for it and set automation to download it every 4 hours. 
 We will also use a custom Python script to check the file we created for headlines that are longer than 68 characters and remove them.
 Then we will replace voice.py with our modified version and reboot once in auto mode we should start to see headlines occasionally.
 
