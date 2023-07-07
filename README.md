@@ -21,14 +21,13 @@ Copy the commands here and paste them in order in a terminal window. (just right
 1. SSH to your Pwnagotchi. <~~~Self explanatory. if you need help with this do not proceed further this modification might not be for you.
 2. Sudo su <~~~ go superuser
 3. curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss <~~~Download Showerthoughts RSS feed to root.
-4. chmod 666 /root/showerthoughts.rss <~~~Gives system-wide read-write permissions on the file. Needed to remove long headlines.
-5. wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py <~~~Downloads remove_long_titles.py to the right spot
-6. python /usr/local/bin/remove_long_titles.py <~~~run the script we just saved to remove long headlines right away.
-7. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
-8. mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~This command will first rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
-9. (echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
+4. wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py <~~~Downloads remove_long_titles.py to the right spot
+5. python /usr/local/bin/remove_long_titles.py <~~~run the script we just saved to remove long headlines right away.
+6. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
+7. mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~This command will first rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
+8. (echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
  <~~~ Sets cronjobs to download the RSS every 4 hours, then run remove_long_lines.py to remove long Headlines in the feed file every 4 hours.
-10. touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi <~~~this will reboot your Pwnagotchi.
+9. touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi <~~~this will reboot your Pwnagotchi.
 
 Once loaded in auto mode you should see new phrases appear regularly.
 
