@@ -18,7 +18,7 @@ def remove_long_titles(filename):
     with open(filename, 'w') as f:
         f.write(data)
 
-    with open('/root/shortshowerthoughts.rss', 'r') as f:
+    with open('/root/shortshowerthoughts.rss', 'a') as f:
         for headline in short_headlines:
             if headline not in f.read():
                 f.write('<title>{}</title>'.format(headline))
