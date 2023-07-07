@@ -20,7 +20,7 @@ Copy the commands here and paste them in order in a terminal window. (just right
 
 1. SSH to your Pwnagotchi. <~~~Self explanatory. if you need help with this do not proceed further this modification might not be for you.
 2. Sudo su <~~~ go superuser
-3. curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss <~~~Download Showerthoughts RSS feed to root.
+3. curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output /root/showerthoughts.rss <~~~Download Showerthoughts RSS feed to root.
 4. wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py <~~~Downloads remove_long_titles.py to the right spot
 5. python /usr/local/bin/remove_long_titles.py <~~~run the script we just saved to remove long headlines right away.
 6. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
