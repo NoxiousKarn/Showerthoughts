@@ -43,10 +43,11 @@ Then we will type a command to remove voice.py and then rename voice.py.old to v
 2.  rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~ removes voice.py then renames voice.py.old to voice.py
 3. rm /usr/local/bin/remove_long_titles.py <~~~ Removes our custom python code that removes long headlines
 4. rm /root/showerthoughts.rss <~~~ Removes showerthoughts.rss file from our root folder
-5. crontab -e
-6. Delete the lines we added
-7. Save and exit Hit: CTRL+O, [ENTER], CTRL+X 
-8. Reboot
+5. rm /root/shortshowerthoughts.rss <~~~ Removes shortshowerthoughts.rss file from our root folder. **skip if reinstalling or updating to keep your headlines**
+6. crontab -e
+7. Delete the lines we added
+8. Save and exit Hit: CTRL+O, [ENTER], CTRL+X 
+9. Reboot
 
    There all gone and back to normal!
 
