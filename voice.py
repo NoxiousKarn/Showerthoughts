@@ -1,7 +1,7 @@
 import gettext
 import os
 import random
-
+import logging
 
 class Voice:
     def __init__(self, lang):
@@ -131,6 +131,7 @@ class Voice:
     def on_waiting(self, secs):
         random_headline = 'grep -Po \'<title>((?!<).)*</title>\' /root/showerthoughts.rss | sed \'s/<title>//g\' | sed \'s/<\/title>//g\' | shuf -n 1'
         headline = os.popen(random_headline).read().rstrip()
+        logging.info('Headline: %s', headline)
         return headline
 
     def on_assoc(self, ap):
