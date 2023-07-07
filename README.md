@@ -26,7 +26,7 @@ Copy the commands here and paste them in order in a terminal window. (just right
 6. wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py <~~~ Saves modified voice.py as voice.py.1
 7. mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py <~~~This command will first rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
 8. (echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
- <~~~ Sets cronjobs to download the RSS every 4 hours, then run remove_long_lines.py to remove long Headlines in the feed file every 4 hours.
+ <~~~ Sets cronjobs to download the RSS every 4 hours, then run remove_long_titles.py to remove long Headlines in the feed file every 4 hours.
 9. touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi <~~~this will reboot your Pwnagotchi.
 
 Once loaded in auto mode you should see new phrases appear regularly.
