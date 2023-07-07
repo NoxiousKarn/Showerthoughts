@@ -131,7 +131,7 @@ class Voice:
     def on_waiting(self, secs):
         random_headline = 'grep -Po \'<title>((?!<).)*</title>\' /root/shortshowerthoughts.rss | sed \'s/<title>//g\' | sed \'s/<\/title>//g\' | shuf -n 1'
         headline = os.popen(random_headline).read().rstrip()
-        logging.info('Headline: %s', headline)
+        logging.info('Shower_Thought: %s', headline)
         return headline
 
     def on_assoc(self, ap):
