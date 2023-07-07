@@ -1,5 +1,6 @@
 import re
 import os
+import logging
 
 def remove_long_titles(filename):
     # This function removes long headlines from an RSS feed.
