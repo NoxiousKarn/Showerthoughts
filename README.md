@@ -1,4 +1,4 @@
-# Showerthoughts Pwnagotchi Modification
+# Shower Thoughts Pwnagotchi Modification
 
 ## Introduction
 
