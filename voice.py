@@ -129,7 +129,7 @@ class Voice:
         return random.choice(['...', '!'])
 
     def on_waiting(self, secs):
-        random_headline = 'grep -Po \'<title>((?!<).)*</title>\' /root/showerthoughts.rss | sed \'s/<title>//g\' | sed \'s/<\/title>//g\' | shuf -n 1'
+        random_headline = 'grep -Po \'<title>((?!<).)*</title>\' /root/shortshowerthoughts.rss | sed \'s/<title>//g\' | sed \'s/<\/title>//g\' | shuf -n 1'
         headline = os.popen(random_headline).read().rstrip()
         logging.info('Headline: %s', headline)
         return headline
