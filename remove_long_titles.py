@@ -13,6 +13,7 @@ def remove_long_titles(filename):
     for headline in headlines:
         if len(headline) > 68 or headline.strip().lower() == "showerthoughts":
             data = data.replace("<title>{}</title>".format(headline), '')
+            data = data.replace("&amp;", "&")
 
     with open(filename, 'w') as f:
         f.write(data)
@@ -31,6 +32,7 @@ def check_for_duplicates(filename):
     for headline in headlines:
         if data.count("<title>{}</title>".format(headline)) > 1:
             data = data.replace("<title>{}</title>".format(headline), '')
+            data = data.replace("&amp;", "&")
 
     with open(filename, 'w') as f:
         f.write(data)
