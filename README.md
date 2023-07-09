@@ -1,6 +1,5 @@
 # Shower Thoughts Pwnagotchi Modification
 
-<img src="/attachments/gifmaker_me.gif" alt='Pwnagotchi reading Shower Thoughts' width="631" height="272"/>
 
 ## Introduction
 
