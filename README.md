@@ -1,6 +1,6 @@
 # Shower Thoughts Pwnagotchi Modification
 
-<img src="doc/attachments/gifmaker_me.gif" width="631" height="272"/>
+<img src="doc/attachments/showerthoughts.gif" width="631" height="272"/>
 
 ## Introduction
 
