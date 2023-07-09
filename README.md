@@ -1,5 +1,7 @@
 # Shower Thoughts Pwnagotchi Modification
 
+<img src="/attachments/gifmaker_me.gif" alt='Pwnagotchi reading Shower Thoughts' width="631" height="272"/>
+
 ## Introduction
 
 This modification displays random r/showerthoughts headlines on your pwnagotchi when the device is waiting. It is a fun way to add some personality to your pwnagotchi and keep you entertained.
