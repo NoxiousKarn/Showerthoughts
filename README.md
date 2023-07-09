@@ -85,5 +85,3 @@ touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 
 ## License
 The plugin is licensed under the GPLv3 license.
-
-3. Reboot
