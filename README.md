@@ -48,6 +48,18 @@ touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 
 Once loaded in auto mode you should see new phrases appear regularly.
 
+This is a single command that performs all of the above at once in order.
+```bash
+sudo su -c 'curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent "Mozilla" --output /root/showerthoughts.rss && \
+wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py && \
+python /usr/local/bin/remove_long_titles.py && \
+wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py && \
+mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old && \
+mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py && \
+(echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab - && \
+touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi'
+
+```
 ## Usage
 It's just gonna run by itself you don't need to do anything for the phrases to start. Every 4 hours it will DL the RSS and then remove the long headlines, if you don't have internet after the 4-hour mark it will wait for the internet and download the feed then. 
 
