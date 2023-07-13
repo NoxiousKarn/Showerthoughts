@@ -95,6 +95,22 @@ Ctrl+X
 touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 
 ```
+One command works but first you have to manually delete the cronjobs
+```bash
+crontab -e
+```
+Delete the two added lines, save and close. 
+
+Then Paste the following to remove all of our changes:
+
+```bash
+sudo su -c 'rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; \
+mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; \
+rm /usr/local/bin/remove_long_titles.py ; \
+rm /root/showerthoughts.rss ; \
+rm /root/shortshowerthoughts.rss ; \
+touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi'
+```
    There all gone and back to normal!
 
 ## License
