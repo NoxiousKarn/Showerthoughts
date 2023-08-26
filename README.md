@@ -4,11 +4,21 @@
 
 ## Introduction
 
-This modification displays random r/showerthoughts headlines on your pwnagotchi when the device is waiting. It is a fun way to add some personality to your pwnagotchi and keep you entertained.
+This modification displays random r/showerthoughts headlines on your pwnagotchi when the device is waiting. 
+
+It is a fun way to add some personality to your pwnagotchi and keep you entertained.
+
+NOTE: All other phrases used by pwnagothi will still display as normal, but waiting...(x Sec) etc... is replaced with a call to read a modified copy of the official r/showerthoughts rss feed. 
+It is modified by a python program that only saves valid headlines to an rss file called shortshowerthoughts.rss
+This means your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted but only call a phrase during a normally dull phrase that takes some time to complete. 
+
+
 
 To do the modification, follow the instructions in the configuration section. 
 
-You will need internet to the Pwnagotchi for these steps to work. And every time it needs to download the RSS feed. (It will wait until the internet is restored to perform the download.)
+You will need internet to the Pwnagotchi for these steps to work.
+
+And every time it needs to download the RSS feed. (It will wait until the internet is restored to perform the download.)
 
 First, get a shared internet connection via BT or through your host machine. 
 
