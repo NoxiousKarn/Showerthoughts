@@ -101,7 +101,7 @@ One command works but first you have to manually delete the cronjobs
 ```bash
 crontab -e
 ```
-Delete the two added lines, save and close. 
+Delete the two added lines, save(ctrl+o) and close(ctrl+x). 
 
 Then Paste the following to remove all of our changes:
 
