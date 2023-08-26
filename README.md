@@ -10,7 +10,7 @@ It is a fun way to add some personality to your pwnagotchi and keep you entertai
 
 NOTE: All other phrases used by pwnagothi will still display as normal, but waiting...(x Sec) etc... is replaced with a call to read a modified copy of the official r/showerthoughts rss feed. 
 It is modified by a python program that only saves valid headlines to an rss file called shortshowerthoughts.rss
-This means once you have some healines you wont need internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted.
+This means once you have some healines you wont need internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted and your pwnagotchi connects to the internet.
 
 
 To do the modification, follow the instructions in the configuration section. 
