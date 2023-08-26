@@ -12,9 +12,11 @@ You will need internet to the Pwnagotchi for these steps to work. And every time
 
 First, get a shared internet connection via BT or through your host machine. 
 
-If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along. 
+(If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along.)
 
 Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from clipboard)
+
+SSH into your pi and follow the configuration below
 
 ## Configuration
 
