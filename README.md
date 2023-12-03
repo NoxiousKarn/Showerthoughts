@@ -29,32 +29,38 @@ SSH into your Pi and follow the configuration below
 
 ## Configuration
 
+
+Go superuser
 ```bash
-# Go superuser
 sudo su
-
-# Download Showerthoughts RSS feed to root. 
+```
+Download Showerthoughts RSS feed to root. 
+```bash
 curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output /root/showerthoughts.rss
-
-# Downloads remove_long_titles.py to /usr/local/bin
+```
+Downloads remove_long_titles.py to /usr/local/bin
+```bash
 wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py
-
-# Run remove_long_titles.py
+```
+Run remove_long_titles.py
+```bash
 python /usr/local/bin/remove_long_titles.py
-
-# Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1
+```
+Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1
+```bash
 wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py
-
-# rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
+```
+Rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
+```bash
 mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py
-
-# cronjobs to download the RSS every 4 hours, then run remove_long_titles.py to remove long Headlines in the feed file every 4 hours
+```
+Set Cronjobs to download the RSS every 4 hours, then run remove_long_titles.py to remove long Headlines in the feed file every 4 hours
+```bash
 (echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python3 /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
-
-# Reboot Pwnagotchi
+```
+Reboot Pwnagotchi
+```bash
 touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
-
-
 ```
 
 Once loaded in auto mode you should see new phrases appear regularly.
@@ -77,36 +83,44 @@ It's just gonna run by itself you don't need to do anything for the phrases to s
 
 ## Uninstalling
 If you want to undo what we did SSH in.
+
+Go Superuser
 ```bash
-# Go Superuser
 sudo su
-
-# Remove voice.py then rename voice.py.old to voice.py
+```
+Remove voice.py then rename voice.py.old to voice.py
+```bash
 rm /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py
-
-# Remove remove-long-titles.py
+```
+Remove remove-long-titles.py
+```bash
 rm /usr/local/bin/remove_long_titles.py
-
-# Remove showerthoughts.rss file from our root folder
+```
+Remove showerthoughts.rss file from our root folder
+```bash
 rm /root/showerthoughts.rss
-
-# Remove shortshowerthoughts.rss Skip this step if you want to keep already collected headlines for reinstall
+```
+Remove shortshowerthoughts.rss Skip this step if you want to keep already collected headlines for reinstall
+```bash
 rm /root/shortshowerthoughts.rss
-
-# Remove cronjobs from crontab manually Delete the lines we added and save
+```
+Remove cronjobs from crontab manually Delete the lines we added and save
+```bash
 crontab -e
-# save
+```
+save
 Ctrl+O
-# save as named
+save as named
 [enter]
-# Exit
+Exit
 Ctrl+X
 
-# Reboot Pwnagotchi
+Reboot Pwnagotchi
+```bash
 touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
-
 ```
 One command works but first you have to manually delete the cronjobs
+
 ```bash
 crontab -e
 ```
