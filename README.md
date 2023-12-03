@@ -8,9 +8,9 @@ This modification displays random r/showerthoughts headlines on your pwnagotchi 
 
 It is a fun way to add some personality to your pwnagotchi and keep you entertained.
 
-NOTE: All other phrases used by pwnagothi will still display as normal, but waiting...(x Sec) etc... is replaced with a call to read a modified copy of the official r/showerthoughts rss feed. 
+NOTE: All other phrases used by pwnagotchi will still display as normal, but waiting...(x Sec), etc... is replaced with a call to read a modified copy of the official r/showerthoughts rss feed. 
 It is modified by a python program that only saves valid headlines to an rss file called shortshowerthoughts.rss
-This means once you have some healines you wont need internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted and your pwnagotchi connects to the internet.
+This means once you have some headlines you won't need the internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted, once connected again to the internet.
 
 
 To do the modification, follow the instructions in the configuration section. 
@@ -23,9 +23,9 @@ First, get a shared internet connection via BT or through your host machine.
 
 (If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along.)
 
-Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from clipboard)
+Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from the clipboard)
 
-SSH into your pi and follow the configuration below
+SSH into your Pi and follow the configuration below
 
 ## Configuration
 
