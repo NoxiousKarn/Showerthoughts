@@ -119,7 +119,7 @@ Reboot Pwnagotchi
 ```bash
 touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 ```
-One command works but first you have to manually delete the cronjobs
+## One command works but first you have to manually delete the cronjobs
 
 ```bash
 crontab -e
