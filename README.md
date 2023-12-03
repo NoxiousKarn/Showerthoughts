@@ -9,26 +9,18 @@ This modification displays random r/showerthoughts headlines on your pwnagotchi 
 It is a fun way to add some personality to your pwnagotchi and keep you entertained.
 
 NOTE: All other phrases used by pwnagotchi will still display as normal, but waiting...(x Sec), etc... is replaced with a call to read a modified copy of the official r/showerthoughts rss feed. 
-It is modified by a python program that only saves valid headlines to an rss file called shortshowerthoughts.rss
-This means once you have some headlines you won't need the internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted, once connected again to the internet.
+It is modified by a Python program that only saves valid headlines to an RSS file called shortshowerthoughts.rss in append mode. (Append = add to the file don't overwrite) 
+This means once you have some headlines you won't need the internet for them to display and your list of phrases will grow every time a valid (Less then 68 characters long) headline is posted to r/showerthoughts RSS feed.
 
 
 To do the modification, follow the instructions in the configuration section. 
+You will need internet to the Pwnagotchi for these steps to work and every time it needs to download the RSS feed for new phrases. 
+It will wait until the internet is restored to perform the download from Reddit.
 
-You will need internet to the Pwnagotchi for these steps to work.
-
-And every time it needs to download the RSS feed. (It will wait until the internet is restored to perform the download.)
-
-First, get a shared internet connection via BT or through your host machine. 
-
-(If you are running a Pi3 or 4 and have an ETH port just connect that port to your router and follow along.)
-
-Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from the clipboard)
-
-SSH into your Pi and follow the configuration below
+SSH into your Pi and follow the configuration below.
 
 ## Configuration
-
+Copy the commands here and paste them in order in a terminal window. (just right click in the terminal window to paste from the clipboard)
 
 Go superuser
 ```bash
