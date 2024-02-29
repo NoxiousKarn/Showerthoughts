@@ -57,7 +57,7 @@ touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 
 Once loaded in auto mode you should see new phrases appear regularly.
 
-This is a single command that performs all of the above at once in order.
+## This is a single command that performs all of the above at once in order. If you followed the steps above do not run the one command. If you have done none of the steps above and just wanna do a quick install copy this script and run it:
 ```bash
 sudo su -c 'curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent "Mozilla" --output /root/showerthoughts.rss && \
 wget -P /usr/local/bin https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/remove_long_titles.py && \
