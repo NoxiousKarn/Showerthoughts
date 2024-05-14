@@ -1,6 +1,7 @@
 # Shower Thoughts Pwnagotchi Modification
 
 <img src="doc/attachments/showerthoughts.gif" width="631" height="272"/>
+
 ## IMPORTANT!! Verifiy the location of your voice.py file location as it's based on the version of python your unit is running.
 
 
