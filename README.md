@@ -130,7 +130,7 @@ Reboot Pwnagotchi
 touch /root/.pwnagotchi-auto && systemctl restart pwnagotchi
 ```
 
-   There all gone and back to normal!
+## There all gone and back to normal!
 
 ## License
 The plugin is licensed under the GPLv3 license.
