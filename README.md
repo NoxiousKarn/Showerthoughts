@@ -67,7 +67,7 @@ mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py /usr/local/lib/pyt
 
 Set Cronjobs to download the RSS every 4 hours, then run remove_long_titles.py to remove long Headlines in the feed file every 4 hours
 ```bash
-(echo "0 */5 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */5 * * * /usr/bin/python /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
+(echo "0 */4 * * * curl --silent https://www.reddit.com/r/showerthoughts/.rss --user-agent 'Mozilla' --output showerthoughts.rss" ; echo "0 */4 * * * /usr/bin/python /usr/local/bin/remove_long_titles.py >/dev/null 2>&1") | crontab -
 ```
 Reboot Pwnagotchi
 ```bash
