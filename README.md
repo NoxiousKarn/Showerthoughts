@@ -44,7 +44,7 @@ python /usr/local/bin/remove_long_titles.py
 ```
 ## Python Version 3.7 (only)
 
-Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1 (Work with older forks running python 3.7)
+Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running python 3.7)
 ```bash
 wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py
 ```
@@ -54,13 +54,13 @@ mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/pyt
 ```
 ## Python 3.9 (only)
 
-Download modified voice.py from this repo and place in /usr/local/lib/python3.p/dist-packages/pwnagotchi/ it should save as voice.py.1 (Work with older forks running python 3.9)
+Download modified voice.py from this repo and place in /usr/local/lib/python3.p/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running python 3.9)
 ```bash
 wget -P /usr/local/lib/python3.9/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py
 ```
 Rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
 ```bash
-mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py
+mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py
 ```
 
 ## Remaining steps are the same for all versions.
