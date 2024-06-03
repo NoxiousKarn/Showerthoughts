@@ -60,7 +60,7 @@ wget -P /usr/local/lib/python3.9/dist-packages/pwnagotchi/ https://raw.githubuse
 ```
 Rename voice.py to voice.py.old and then rename voice.py.1 to voice.py.
 ```bash
-mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py
+mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py.old ; mv /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py.1 /usr/local/lib/python3.9/dist-packages/pwnagotchi/voice.py
 ```
 
 ## Remaining steps are the same for all versions.
