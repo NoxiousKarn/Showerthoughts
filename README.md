@@ -2,7 +2,7 @@
 
 <img src="doc/attachments/showerthoughts.gif" width="631" height="272"/>
 
-## IMPORTANT!! Verifiy the location of your voice.py file location as it's based on the version of python your unit is running.
+## IMPORTANT!! Verify your voice.py file location as it's based on the version of Python your unit is running.
 
 
 
@@ -44,7 +44,7 @@ python /usr/local/bin/remove_long_titles.py
 ```
 ## Python Version 3.7 (only)
 
-Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running python 3.7)
+Download modified voice.py from this repo and place in /usr/local/lib/python3.7/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running Python 3.7)
 ```bash
 wget -P /usr/local/lib/python3.7/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py
 ```
@@ -54,7 +54,7 @@ mv /usr/local/lib/python3.7/dist-packages/pwnagotchi/voice.py /usr/local/lib/pyt
 ```
 ## Python 3.9 (only)
 
-Download modified voice.py from this repo and place in /usr/local/lib/python3.p/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running python 3.9)
+Download modified voice.py from this repo and place in /usr/local/lib/python3.p/dist-packages/pwnagotchi/ it should save as voice.py.1 (Works with forks running Python 3.9)
 ```bash
 wget -P /usr/local/lib/python3.9/dist-packages/pwnagotchi/ https://raw.githubusercontent.com/NoxiousKarn/Showerthoughts/main/voice.py
 ```
@@ -88,7 +88,7 @@ Go Superuser
 ```bash
 sudo su
 ```
-## Choose the script that matches you Python version.
+## Choose the script that matches your Python version.
 
 ## Python 3.7
 Remove voice.py then rename voice.py.old to voice.py
